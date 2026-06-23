@@ -3,7 +3,7 @@
 Interactive sales analytics dashboard built with Python, SQL, Power BI, and Streamlit.
 
 ## Live Demo
-🔗 *Coming soon — Streamlit Cloud*
+🔗 [Open Dashboard](https://sales-dashboard-8unsqx6dewrjtb3xfred6m.streamlit.app/)
 
 ## Preview
 ![Dashboard Preview](screenshots/dashboard.png)

@@ -1,19 +1,16 @@
 import streamlit as st
 import pandas as pd
-import sqlite3
 import plotly.express as px
 import plotly.graph_objects as go
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "sales.db")
+CSV_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "sales.csv")
 
 st.set_page_config(page_title="Sales Dashboard", page_icon="📊", layout="wide")
 
 @st.cache_data
 def load_data():
-    conn = sqlite3.connect(DB_PATH)
-    df = pd.read_sql("SELECT * FROM sales", conn)
-    conn.close()
+    df = pd.read_csv(CSV_PATH)
     df["date"] = pd.to_datetime(df["date"])
     return df
 
